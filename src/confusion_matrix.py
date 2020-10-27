@@ -1,0 +1,7 @@
+cm = metrics.confusion_matrix(Y_valid,preds)
+plt.figure(figsize=(10,10))
+cmap = sns.cubehelix_palette(50, hue = 0.05, rot = 0, light = 0.9,dark = 0, as_cmap = True)
+sns.set(font_scale = 2.5)
+sns.heatmap(cm, annot = True, cmap = cmap, cbar = False)
+plt.ylabel("Actual labels", fontsize=20)
+plt.xlabel("Predicted labels", fontsize = 20)
